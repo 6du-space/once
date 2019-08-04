@@ -19,7 +19,11 @@ read = (name)~>
 
 
 do !~>
-  console.log await read(\sec)
-  console.log await read(\pub)
+  sec = await read(\sec)
+  pub = await read(\pub)
+  sec = sec.buffer.slice(sec.byteOffset, sec.byteOffset+sec.byteLength)
+  message = \test
+  sign = nacl.sign(message, sec)
+  console.log sign
 
 
