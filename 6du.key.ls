@@ -8,7 +8,7 @@ require! {
 do !~>
   {publicKey, secretKey} = nacl.sign.keyPair()
 
-  await config.file("key/6du.pub", publicKey)
-  await config.file("key/6du.sec", secretKey)
+  await config.file("key/6du.pub").set publicKey
+  await config.file("key/6du.sec").set secretKey
 
 
