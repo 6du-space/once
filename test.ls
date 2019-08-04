@@ -19,11 +19,15 @@ read = (name)~>
 
 
 do !~>
-  sec = await read(\sec)
-  pub = await read(\pub)
-  sec = sec.buffer.slice(sec.byteOffset, sec.byteOffset+sec.byteLength)
-  message = \test
-  sign = nacl.sign(message, sec)
+  sec = await read("sec")
+  msg = Buffer.from \tes323232t
+  sign = nacl.sign(msg, sec)
   console.log sign
+  pub = await read("pub")
+  console.log Buffer.from(nacl.sign.open(sign, pub)).toString()
 
+  o = nacl.sign.keyPair!
+  sign = nacl.sign(msg, o.secretKey)
+  console.log nacl.sign.open(sign, pub)
+	# console.log sign
 
