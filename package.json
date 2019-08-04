@@ -6,6 +6,8 @@
   "author": "Tq-Lj <6du@protonmail.com>",
   "license": "MIT",
   "dependencies": {
+    "livescript-system": "^1.0.1",
+    "livescript-transform-implicit-async": "^1.1.0",
     "tweetnacl": "^1.0.1"
   }
 }
