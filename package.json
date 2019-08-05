@@ -10,6 +10,6 @@
     "fs-extra": "^8.1.0",
     "livescript-system": "^1.0.1",
     "livescript-transform-implicit-async": "^1.1.0",
-    "sodium-native": "^2.4.3"
+    "sodium-6du": "^0.0.1"
   }
 }
